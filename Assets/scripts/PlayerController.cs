@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hasPowerUp && collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("This shit works" + collision.gameObject + hasPowerUp);
+            
             Rigidbody rbEnemy = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayDir = collision.gameObject.transform.position - transform.position;
             
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator PowerUpCountdown()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(8);
         hasPowerUp = false;
         powerIndicator.SetActive(false);
     }
