@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody rbPlayer;
-    public float speed = 120.0f;
-    public float powerUpSpeed = 10.0f;
+    public float speed = 60.0f;
+    public float powerUpSpeed = 200.0f;
     public GameObject powerIndicator;
 
 
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hasPowerUp && collision.gameObject.CompareTag("Enemy"))
         {
-            
+            Debug.Log("Player has collided with " + collision.gameObject + " with powerup set to: " + hasPowerUp);
             Rigidbody rbEnemy = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayDir = collision.gameObject.transform.position - transform.position;
             

@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     private float yBoundary = -15.0f;
 
-    public int Length { get; internal set; }
+    //public int Length { get; internal set; }
 
     // Start is called before the first frame update
     void Start()

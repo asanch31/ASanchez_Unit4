@@ -23,7 +23,8 @@ public class SpawnManager : MonoBehaviour
     {
         Instantiate(powerUpPrefab, GenerateSpawnPosition(), powerUpPrefab.transform.rotation);
         for (int i = 0; i < enemyNum; i++)
-        {    
+        {
+                
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
     }
@@ -38,6 +39,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         enemyCount = FindObjectsOfType<Enemy>().Length; 
         if (enemyCount == 0)
         {
